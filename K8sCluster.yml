@@ -1,0 +1,11 @@
+- hosts: localhost
+  roles:
+  - role: ec2
+
+- hosts: "tag_Name_K8SMaster"
+  roles:
+  - role: K8sMaster
+
+- hosts: "tag_Name_K8SSlave"
+  roles:
+  - role: K8sSlaves
